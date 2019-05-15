@@ -23,7 +23,7 @@
               <span class="badge badge-success"><%= "#{pet.age} anos" %></span>
             </div>
             <% if user_signed_in? %>
-              <button type="button" class="btn btn-success btn-adoption">Quero adotar</button>
+              <button type="button" class="btn btn-success btn-request-adoption">Quero adotar</button>
             <% else %>
               <button disabled type="button" class="btn btn-success btn-adoption">Faça login e adote on-line</button>
             <% end %>
@@ -34,4 +34,6 @@
     <% end %>
   </div>
 </div>
+<%= render 'request_adoption_modal' %>
 <%= stylesheet_link_tag 'adoption' %>
+<%= javascript_include_tag 'adoption/index' %>
